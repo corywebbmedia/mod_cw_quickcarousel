@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+    <name>mod_cw_quickcarousel</name>
+    <author>Cory Webb</author>
+    <creationDate>February 2016</creationDate>
+    <copyright>Copyright (C) 2016 Cory Webb Media, LLC. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>joomla@corywebbmedia.com</authorEmail>
+    <authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
+    <version>1.0.1</version>
+    <description>MOD_CW_QUICKCAROUSEL_XML_DESCRIPTION</description>
+
+    <scriptfile>script.cw_quickcarousel.php</scriptfile>
+
+    <files>
+        <filename module="mod_cw_quickcarousel">mod_cw_quickcarousel.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_cw_quickcarousel.ini</language>
+        <language tag="en-GB">en-GB.mod_cw_quickcarousel.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="slides"
+                    type="repeatable"
+                    icon="picture"
+                    select="MOD_CW_QUICKCAROUSEL_SLIDES_SELECT"
+                    description="MOD_CW_QUICKCAROUSEL_SLIDES_DESC"
+                    label="MOD_CW_QUICKCAROUSEL_SLIDES_LABEL"
+                    filter="raw">
+                    <fieldset hidden="true" name="slides_modal" repeat="true">
+                        <field name="image"
+                            type="media"
+                            label="MOD_CW_QUICKCAROUSEL_SLIDES_IMAGE_LABEL"
+                            description="MOD_CW_QUICKCAROUSEL_SLIDES_IMAGE_DESC" />
+                        <field name="title"
+                            label="MOD_CW_QUICKCAROUSEL_SLIDES_TITLE_LABEL"
+                            description="MOD_CW_QUICKCAROUSEL_SLIDES_TITLE_DESC"
+                            size="30"
+                            type="text" />
+                        <field name="caption"
+                            label="MOD_CW_QUICKCAROUSEL_SLIDES_CAPTION_LABEL"
+                            description="MOD_CW_QUICKCAROUSEL_SLIDES_CAPTION_DESC"
+                            size="30"
+                            type="textarea"
+                            filter="raw" />
+                        <field name="link" type="text"
+                            label="MOD_CW_QUICKCAROUSEL_SLIDES_LINK_LABEL"
+                            description="MOD_CW_QUICKCAROUSEL_SLIDES_LINK_DESC"
+                            size="30" />
+                    </fieldset>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static">
+                    <option
+                        value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" name="CW Quick Carousel Module Updates"><![CDATA[https://corywebbmedia.com/cw-quick-carousel-module-update-stream/?view=update&dummy=extension.xml]]></server>
+    </updateservers>
+</extension>
