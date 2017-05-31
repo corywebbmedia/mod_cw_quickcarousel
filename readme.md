@@ -1,0 +1,1 @@
+# CW Quick Carousel Module for Joomla
