@@ -33,7 +33,9 @@
                     filter="raw">
                     <fieldset hidden="true" name="slides_modal" repeat="true">
                         <field name="image"
-                            type="media"
+                            type="imagelist"
+                            directory="images"
+                            hide_none="true"
                             label="MOD_CW_QUICKCAROUSEL_SLIDES_IMAGE_LABEL"
                             description="MOD_CW_QUICKCAROUSEL_SLIDES_IMAGE_DESC" />
                         <field name="title"

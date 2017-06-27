@@ -24,7 +24,7 @@ if($slides): ?>
                     <?php endif; ?>
 
                         <?php if($slide['image']): ?>
-                        <img src="<?php echo $slide['image']; ?>" alt="<?php echo htmlspecialchars($slide['title']); ?>" />
+                        <img src="<?php echo JUri::base(); ?>images/<?php echo $slide['image']; ?>" alt="<?php echo htmlspecialchars($slide['title']); ?>" />
                         <?php endif; ?>
 
                         <?php if($slide['title'] || $slide['caption']): ?>
