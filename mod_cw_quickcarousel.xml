@@ -6,8 +6,8 @@
     <copyright>Copyright (C) 2016 Cory Webb Media, LLC. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
     <authorEmail>joomla@corywebbmedia.com</authorEmail>
-    <authorUrl>http://corywebbmedia.com/joomla-extensions</authorUrl>
-    <version>1.0.1</version>
+    <authorUrl>https://cwextensions.com</authorUrl>
+    <version>1.0.2</version>
     <description>MOD_CW_QUICKCAROUSEL_XML_DESCRIPTION</description>
 
     <scriptfile>script.cw_quickcarousel.php</scriptfile>
@@ -95,6 +95,6 @@
     </config>
 
     <updateservers>
-        <server type="extension" name="CW Quick Carousel Module Updates"><![CDATA[https://corywebbmedia.com/cw-quick-carousel-module-update-stream/?view=update&dummy=extension.xml]]></server>
+        <server type="extension" name="CW Quick Carousel Module Updates"><![CDATA[https://cwextensions.com/cw-quick-carousel-module-update-stream/?view=update&dummy=extension.xml]]></server>
     </updateservers>
 </extension>
